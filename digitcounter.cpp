@@ -42,8 +42,8 @@ bool validInput(std::string input) {
   if(size > 0) {
     valid = true;
     for(int i = 0; i < size; i++) {
-      char currChar = input[i];
-      if(!isdigit(currChar) && (currChar != '.' || currChar != '-')) {
+      char currChar = input[i]
+      if(!isdigit(currChar) && currChar != '.' && currChar != '-') {
 	valid = false;
       }
     }
