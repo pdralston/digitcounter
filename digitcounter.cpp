@@ -32,14 +32,18 @@ int main(){
   }
   return 0;
 }
-
+/** bool validInput(string)
+	returns true if the input is either an int or double, positive or negative.
+	@arg input string to verify
+*/
 bool validInput(std::string input) {
   bool valid = false;
   int size = input.size();
   if(size > 0) {
     valid = true;
     for(int i = 0; i < size; i++) {
-      if(!isdigit(input[i])) {
+      char currChar = input[i];
+      if(!isdigit(currChar) && (currChar != '.' || currChar != '-')) {
 	valid = false;
       }
     }
